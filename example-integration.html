@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Integrasi API Kutipan Islami</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .quote-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .quote-category {
+            display: inline-block;
+            background: linear-gradient(45deg, #4caf50, #45a049);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #333;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .quote-text::before {
+            content: '"';
+            font-size: 3rem;
+            color: #4caf50;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            opacity: 0.3;
+        }
+
+        .quote-arabic {
+            font-size: 1.8rem;
+            text-align: right;
+            margin-bottom: 20px;
+            color: #2d5016;
+            font-family: 'Traditional Arabic', 'Arial', serif;
+            line-height: 2;
+            background: linear-gradient(to right, #f0f8f0, #ffffff);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid #4caf50;
+        }
+
+        .quote-source {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .quote-explanation {
+            background: linear-gradient(135deg, #f9f9f9, #f0f8f0);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            border-left: 4px solid #4caf50;
+            line-height: 1.5;
+        }
+
+        .quote-explanation strong {
+            color: #2d5016;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #4caf50, #45a049);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #2196f3, #1976d2);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        .search-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        .category-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            background: white;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            padding: 20px;
+        }
+
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c62828;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .quotes-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .mini-quote {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 3px solid #4caf50;
+        }
+
+        .mini-quote-text {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .mini-quote-source {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .quote-text {
+                font-size: 1.1rem;
+            }
+            
+            .quote-arabic {
+                font-size: 1.4rem;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🕌 API Kutipan Islami Pendidikan</h1>
+            <p>Contoh integrasi API publik gratis untuk sekolah Islam Indonesia</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalQuotes">30</div>
+                <div class="stat-label">Kutipan Terverifikasi</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalCategories">5</div>
+                <div class="stat-label">Kategori</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Gratis & Publik</div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="🔍 Cari kutipan..."
+            >
+            <select id="categorySelect" class="category-select">
+                <option value="">Semua Kategori</option>
+            </select>
+            <button onclick="searchQuotes()" class="btn btn-secondary" style="width: 100%;">
+                🔍 Cari
+            </button>
+        </div>
+
+        <div class="controls">
+            <button onclick="loadRandomQuote()" class="btn">
+                🔄 Kutipan Acak
+            </button>
+            <button onclick="loadAllQuotes()" class="btn btn-secondary">
+                📚 Semua Kutipan
+            </button>
+        </div>
+
+        <div id="quoteContainer">
+            <div class="loading">Memuat kutipan...</div>
+        </div>
+
+        <div id="allQuotesContainer" class="quotes-grid" style="display: none;"></div>
+    </div>
+
+    <script>
+        // API Configuration
+        const API_BASE = 'http://localhost:3000/api';
+        
+        // State
+        let currentQuote = null;
+        let allQuotes = [];
+        let categories = [];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRandomQuote();
+            loadCategories();
+            setupEventListeners();
+        });
+
+        function setupEventListeners() {
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchQuotes();
+                }
+            });
+
+            document.getElementById('categorySelect').addEventListener('change', function() {
+                if (this.value) {
+                    searchQuotes();
+                }
+            });
+        }
+
+        async function loadRandomQuote() {
+            try {
+                showLoading();
+                const response = await fetch(`${API_BASE}/quotes/random`);
+                const quote = await response.json();
+                displayQuote(quote);
+                hideAllQuotes();
+            } catch (error) {
+                showError('Gagal memuat kutipan acak. Pastikan server berjalan di localhost:3000');
+                console.error('Error:', error);
+            }
+        }
+
+        async function loadAllQuotes() {
+            try {
+                showLoading();
+                const response = await fetch(`${API_BASE}/quotes`);
+                const quotes = await response.json();
+                allQuotes = quotes;
+                displayAllQuotes(quotes);
+            } catch (error) {
+                showError('Gagal memuat semua kutipan. Pastikan server berjalan di localhost:3000');
+                console.error('Error:', error);
+            }
+        }
+
+        async function loadCategories() {
+            try {
+                const response = await fetch(`${API_BASE}/quotes/categories`);
+                const cats = await response.json();
+                categories = cats;
+                populateCategorySelect(cats);
+            } catch (error) {
+                console.error('Error loading categories:', error);
+            }
+        }
+
+        function populateCategorySelect(categories) {
+            const select = document.getElementById('categorySelect');
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                select.appendChild(option);
+            });
+        }
+
+        async function searchQuotes() {
+            const query = document.getElementById('searchInput').value.trim();
+            const category = document.getElementById('categorySelect').value;
+            
+            if (!query && !category) {
+                loadRandomQuote();
+                return;
+            }
+
+            try {
+                showLoading();
+                const params = new URLSearchParams();
+                if (query) params.append('query', query);
+                if (category) params.append('category', category);
+                
+                const response = await fetch(`${API_BASE}/quotes?${params}`);
+                const quotes = await response.json();
+                
+                if (Array.isArray(quotes)) {
+                    if (quotes.length === 0) {
+                        showError('Tidak ada kutipan yang ditemukan untuk pencarian ini.');
+                    } else {
+                        displayAllQuotes(quotes);
+                    }
+                } else {
+                    displayQuote(quotes);
+                }
+            } catch (error) {
+                showError('Gagal melakukan pencarian. Pastikan server berjalan di localhost:3000');
+                console.error('Error:', error);
+            }
+        }
+
+        function displayQuote(quote) {
+            currentQuote = quote;
+            const container = document.getElementById('quoteContainer');
+            container.innerHTML = `
+                <div class="quote-card">
+                    <div class="quote-category">${quote.category}</div>
+                    <div class="quote-text">${quote.text}</div>
+                    <div class="quote-arabic">${quote.arabic}</div>
+                    <div class="quote-source">📖 ${quote.source}</div>
+                    <div class="quote-explanation">
+                        <strong>💡 Penjelasan:</strong> ${quote.explanation}
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayAllQuotes(quotes) {
+            const container = document.getElementById('allQuotesContainer');
+            container.innerHTML = quotes.map(quote => `
+                <div class="mini-quote">
+                    <div class="mini-quote-text">
+                        <strong>${quote.category}:</strong> "${quote.text.substring(0, 100)}${quote.text.length > 100 ? '...' : ''}"
+                    </div>
+                    <div class="mini-quote-source">📖 ${quote.source}</div>
+                </div>
+            `).join('');
+            container.style.display = 'grid';
+            document.getElementById('quoteContainer').style.display = 'none';
+        }
+
+        function hideAllQuotes() {
+            document.getElementById('allQuotesContainer').style.display = 'none';
+            document.getElementById('quoteContainer').style.display = 'block';
+        }
+
+        function showLoading() {
+            document.getElementById('quoteContainer').innerHTML = '<div class="loading">Memuat...</div>';
+            hideAllQuotes();
+        }
+
+        function showError(message) {
+            document.getElementById('quoteContainer').innerHTML = `<div class="error">❌ ${message}</div>`;
+            hideAllQuotes();
+        }
+
+        // Utility function untuk copy API response
+        async function testAPI() {
+            console.log('Testing API endpoints...');
+            
+            try {
+                // Test random quote
+                const randomResponse = await fetch(`${API_BASE}/quotes/random`);
+                const randomQuote = await randomResponse.json();
+                console.log('Random Quote:', randomQuote);
+                
+                // Test all quotes
+                const allResponse = await fetch(`${API_BASE}/quotes`);
+                const allQuotes = await allResponse.json();
+                console.log('All Quotes count:', allQuotes.length);
+                
+                // Test categories
+                const catsResponse = await fetch(`${API_BASE}/quotes/categories`);
+                const categories = await catsResponse.json();
+                console.log('Categories:', categories);
+                
+                // Test search
+                const searchResponse = await fetch(`${API_BASE}/quotes?query=ilmu`);
+                const searchResults = await searchResponse.json();
+                console.log('Search results:', searchResults.length);
+                
+            } catch (error) {
+                console.error('API Test Error:', error);
+            }
+        }
+
+        // Run API test on page load (comment out in production)
+        // testAPI();
+    </script>
+</body>
+</html>

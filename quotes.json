@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "text": "Bacalah dengan (menyebut) nama Tuhanmu Yang menciptakan, Dia telah menciptakan manusia dari segumpal darah. Bacalah, dan Tuhanmulah Yang Maha Pemurah, Yang mengajar (manusia) dengan perantaran kalam, Dia mengajar kepada manusia apa yang tidak diketahuinya.",
+    "arabic": "ٱقْرَأْ بِاسْمِ رَبِّكَ ٱلَّذِى خَلَقَ ۝ خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ ۝ ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ ۝ ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ ۝ عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
+    "source": "QS. Al-'Alaq: 1-5",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Ayat-ayat pertama yang diturunkan kepada Nabi Muhammad SAW menekankan pentingnya membaca dan menulis sebagai fondasi peradaban Islam."
+  },
+  {
+    "id": 2,
+    "text": "Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat.",
+    "arabic": "يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَـٰتٍ",
+    "source": "QS. Al-Mujadilah: 11",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Islam memberikan kehormatan tinggi kepada para penuntut ilmu, meletakkan mereka di posisi yang mulia di sisi Allah."
+  },
+  {
+    "id": 3,
+    "text": "Dan di antara manusia ada yang berjihad untuk mencari ilmu, padahal Allah tidak memberinya kemudahan untuk memahaminya, namun ia tetap bersabar dan terus berusaha.",
+    "arabic": "وَمِنَ ٱلنَّاسِ مَن يَشْرِى نَفْسَهُ ٱبْتِغَآءَ مَرْضَاتِ ٱللَّهِ ۗ وَٱللَّهُ رَءُوفٌۢ بِٱلْعِبَادِ",
+    "source": "QS. Al-Baqarah: 207",
+    "category": "Kewajiban Belajar",
+    "explanation": "Menuntut ilmu adalah bentuk jihad yang mulia, membutuhkan pengorbanan dan kesabaran dalam mencapainya."
+  },
+  {
+    "id": 4,
+    "text": "Katakanlah: Adakah sama orang-orang yang mengetahui dengan orang-orang yang tidak mengetahui? Sesungguhnya orang yang berakallah yang dapat menerima pelajaran.",
+    "arabic": "قُلْ هَلْ يَسْتَوِى ٱلَّذِينَ يَعْلَمُونَ وَٱلَّذِينَ لَا يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُو۟لُوا۟ ٱلْأَلْبَـٰبِ",
+    "source": "QS. Az-Zumar: 9",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Perbedaan fundamental antara orang berilmu dan tidak berilmu, menunjukkan pentingnya pendidikan dalam membentuk karakter."
+  },
+  {
+    "id": 5,
+    "text": "Mencari ilmu adalah kewajiban atas setiap muslim.",
+    "arabic": "طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",
+    "source": "HR. Ibnu Majah No. 224, Shahih",
+    "category": "Kewajiban Belajar",
+    "explanation": "Hadits ini menjadikan pendidikan sebagai kewajiban agama yang harus dipenuhi oleh setiap muslim, laki-laki maupun perempuan."
+  },
+  {
+    "id": 6,
+    "text": "Barangsiapa yang menempuh jalan untuk mencari ilmu, maka Allah akan memudahkan baginya jalan menuju surga.",
+    "arabic": "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",
+    "source": "HR. Muslim No. 2699",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Menuntut ilmu tidak hanya bermanfaat di dunia, tetapi juga menjadi jalan menuju kebahagiaan abadi di akhirat."
+  },
+  {
+    "id": 7,
+    "text": "Para malaikat meletakkan sayapnya untuk penuntut ilmu karena ridha dengan apa yang ia lakukan.",
+    "arabic": "إِنَّ الْمَلَائِكَةَ لَتَضَعُ أَجْنِحَتَهَا لِطَالِبِ الْعِلْمِ رِضًا بِمَا يَطْلُبُ",
+    "source": "HR. Ahmad No. 16543, Shahih",
+    "category": "Adab Penuntut Ilmu",
+    "explanation": "Para malaikat, makhluk mulia Allah, memberikan penghormatan kepada siapa saja yang bersungguh-sungguh dalam menuntut ilmu."
+  },
+  {
+    "id": 8,
+    "text": "Sesungguhnya para ulama adalah pewaris para nabi. Para nabi tidak mewariskan dinar atau dirham, tetapi mewariskan ilmu. Barangsiapa yang mengambilnya, maka ia telah mengambil bagian yang besar.",
+    "arabic": "إِنَّ الْعُلَمَاءَ هُمْ وَرَثَةُ الْأَنْبِيَاءِ، إِنَّ الْأَنْبِيَاءَ لَمْ يُوَرِّثُوا دِينَارًا وَلَا دِرْهَمًا، وَلَكِنْ وَرَّثُوا الْعِلْمَ، فَمَنْ أَخَذَهُ أَخَذَ بِحَظٍّ وَافِرٍ",
+    "source": "HR. Tirmidzi No. 2682, Shahih",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Ilmu adalah warisan paling berharga dari para nabi, lebih mulia daripada harta material apapun."
+  },
+  {
+    "id": 9,
+    "text": "Dua rakaat yang dibaca oleh orang berilmu lebih baik daripada seribu rakaat yang dibaca oleh orang yang tidak berilmu.",
+    "arabic": "رَكْعَتَانِ يَصْلِيهِمَا الْعَالِمُ أَفْضَلُ مِنْ أَلْفِ رَكْعَةٍ يُصَلِّيهَا الْعَامِلُ",
+    "source": "HR. Darimi No. 351, Hasan",
+    "category": "Ilmu dan Iman",
+    "explanation": "Ilmu meningkatkan kualitas ibadah, menunjukkan integrasi antara kecerdasan dan spiritualitas dalam Islam."
+  },
+  {
+    "id": 10,
+    "text": "Allah tidak menurunkan penyakit kecuali menurunkan pula obatnya. Orang yang mengetahui mengetahuinya dan orang yang tidak mengetahui tidak mengetahuinya.",
+    "arabic": "مَا أَنْزَلَ اللَّهُ دَاءً إِلَّا أَنْزَلَ لَهُ شِفَاءً، عَلِمَهُ مَنْ عَلِمَهُ، وَجَهِلَهُ مَنْ جَهِلَهُ",
+    "source": "HR. Bukhari No. 5678",
+    "category": "Ilmu dan Iman",
+    "explanation": "Ilmu adalah kunci untuk memahami rahmat Allah, termasuk dalam bidang kesehatan dan pengobatan."
+  },
+  {
+    "id": 11,
+    "text": "Tuntutlah ilmu dari buaian hingga liang lahat.",
+    "arabic": "اطْلُبُوا الْعِلْمَ مِنَ الْمَهْدِ إِلَى اللَّحْدِ",
+    "source": "HR. Baihaqi No. 2/499, Dhaif (makna populer)",
+    "category": "Kewajiban Belajar",
+    "explanation": "Catatan: Status hadits Dhaif, namun maknanya tentang pembelajaran sepanjang hayat sangat relevan untuk pendidikan modern."
+  },
+  {
+    "id": 12,
+    "text": "Tuntutlah ilmu walau sampai ke negeri Cina.",
+    "arabic": "اطْلُبُوا الْعِلْمَ وَلَوْ بِالصِّينِ",
+    "source": "HR. Ibnu Adi No. 1/277, Dhaif (makna populer)",
+    "category": "Kewajiban Belajar",
+    "explanation": "Catatan: Status hadits Dhaif, namun makna tentang pentingnya mencari ilmu di mana saja sangat relevan untuk pendidikan global."
+  },
+  {
+    "id": 13,
+    "text": "Ilmu itu lebih baik daripada harta. Ilmu itu menjaga engkau, sedangkan engkau yang menjaga harta. Ilmu itu bertambah apabila dibagikan, sedangkan harta itu berkurang apabila dibagikan.",
+    "arabic": "الْعِلْمُ خَيْرٌ مِنَ الْمَالِ، الْعِلْمُ يَحْرُسُكَ وَأَنْتَ تَحْرُسُ الْمَالَ، وَالْعِلْمُ يَزْدَادُ بِالْإِنْفَاقِ وَالْمَالُ يَنْقُصُ بِالْإِنْفَاقِ",
+    "source": "HR. Thabrani No. 4/57, Hasan",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Ilmu memiliki nilai abadi dan terus berkembang ketika dibagikan, berbeda dengan harta material yang habis terpakai."
+  },
+  {
+    "id": 14,
+    "text": "Siapa yang keluar untuk mencari ilmu, maka ia berada di jalan Allah hingga ia kembali.",
+    "arabic": "مَنْ خَرَجَ فِي طَلَبِ الْعِلْمِ فَهُوَ فِي سَبِيلِ اللَّهِ حَتَّى يَرْجِعَ",
+    "source": "HR. Tirmidzi No. 2647, Shahih",
+    "category": "Kewajiban Belajar",
+    "explanation": "Proses mencari ilmu dianggap sebagai ibadah yang setara dengan jihad di jalan Allah."
+  },
+  {
+    "id": 15,
+    "text": "Sesungguhnya Allah menyukai apabila seseorang dari kalian mengerjakan suatu pekerjaan, ia mengerjakannya dengan itqan (profesional dan sempurna).",
+    "arabic": "إِنَّ اللَّهَ يُحِبُّ إِذَا عَمِلَ أَحَدُكُمْ عَمَلًا أَنْ يُتْقِنَهُ",
+    "source": "HR. Baihaqi No. 5/262, Hasan",
+    "category": "Amal dan Ilmu",
+    "explanation": "Profesionalisme dan kesempurnaan dalam bekerja adalah bagian dari iman, menunjukkan integrasi ilmu dan amal."
+  },
+  {
+    "id": 16,
+    "text": "Keutamaan orang berilmu atas orang yang beribadah adalah seperti keutamaan bulan purnama atas bintang-bintang lainnya.",
+    "arabic": "فَضْلُ الْعَالِمِ عَلَى الْعَابِدِ كَفَضْلِ الْقَمَرِ لَيْلَةَ الْبَدْرِ عَلَى سَائِرِ الْكَوَاكِبِ",
+    "source": "HR. Tirmidzi No. 2720, Shahih",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Orang berilmu memiliki cahaya yang menerangi, sama seperti bulan purnama yang bersinar terang di malam hari."
+  },
+  {
+    "id": 17,
+    "text": "Orang yang mengajarkan kebaikan akan mendapatkan pahala seperti pahala orang yang mengamalkannya, tanpa mengurangi pahala orang yang mengamalkannya sedikit pun.",
+    "arabic": "مَنْ دَعَا إِلَى هُدًى كَانَ لَهُ مِنَ الْأَجْرِ مِثْلُ أُجُورِ مَنْ تَبِعَهُ، لَا يَنْقُصُ ذَلِكَ مِنْ أُجُورِهِمْ شَيْئًا",
+    "source": "HR. Muslim No. 2674",
+    "category": "Amal dan Ilmu",
+    "explanation": "Mengajar dan menyebarkan ilmu adalah amal jariyah yang pahalanya terus mengalir."
+  },
+  {
+    "id": 18,
+    "text": "Bertanyalah kepada orang yang berilmu jika kamu tidak mengetahui.",
+    "arabic": "فَاسْأَلُوا۟ أَهْلَ ٱلذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ",
+    "source": "QS. An-Nahl: 43",
+    "category": "Adab Penuntut Ilmu",
+    "explanation": "Islam mendorong untuk bertanya kepada ahlinya sebagai metode belajar yang efektif dan bertanggung jawab."
+  },
+  {
+    "id": 19,
+    "text": "Dan janganlah kamu mengikuti sesuatu yang tidak kamu ketahui. Karena pendengaran, penglihatan dan hati, semua itu akan diminta pertanggungjawabannya.",
+    "arabic": "وَلَا تَقْفُ مَا لَيْسَ لَكَ بِهِۦ عِلْمٌ ۚ إِنَّ ٱلسَّمْعَ وَٱلْبَصَرَ وَٱلْفُؤَادَ كُلُّ أُو۟لَـٰٓئِكَ كَانَ عَنْهُ مَسْـُٔولًا",
+    "source": "QS. Al-Isra': 36",
+    "category": "Adab Penuntut Ilmu",
+    "explanation": "Setiap ilmu yang disampaikan harus berdasarkan kepastian dan bukti, bukan asumsi atau ikut-ikutan."
+  },
+  {
+    "id": 20,
+    "text": "Hanya orang-orang yang berilmu yang takut kepada Allah.",
+    "arabic": "إِنَّمَا يَخْشَى ٱللَّهَ مِنْ عِبَادِهِ ٱلْعُلَمَـٰٓؤُا۟",
+    "source": "QS. Fatir: 28",
+    "category": "Ilmu dan Iman",
+    "explanation": "Semakin dalam ilmu seseorang tentang kebesaran Allah, semakin tinggi rasa takut dan hormatnya kepada-Nya."
+  },
+  {
+    "id": 21,
+    "text": "Siapa yang menginginkan dunia, maka harus memiliki ilmu. Siapa yang menginginkan akhirat, maka harus memiliki ilmu. Siapa yang menginginkan keduanya, maka harus memiliki ilmu.",
+    "arabic": "مَنْ أَرَادَ الدُّنْيَا فَعَلَيْهِ بِالْعِلْمِ، وَمَنْ أَرَادَ الْآخِرَةَ فَعَلَيْهِ بِالْعِلْمِ، وَمَنْ أَرَادَهُمَا فَعَلَيْهِ بِالْعِلْمِ",
+    "source": "HR. Hakim No. 4/324, Hasan",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Ilmu adalah kunci untuk meraih kesuksesan di dunia dan akhirat, menjadikannya investasi paling berharga."
+  },
+  {
+    "id": 22,
+    "text": "Anak adalah permata, hati mereka bersih dari noda. Jika mereka dibiasakan dengan kebaikan, mereka akan tumbuh dengan kebaikan. Jika mereka dibiasakan dengan keburukan, mereka akan tumbuh dengan keburukan.",
+    "arabic": "اَلْوَلَدُ مَجْهُوْلٌ مَا لَمْ يَتَعَلَّمْ، وَالْقَلْبُ صَفْحَةٌ بَيْضَاءُ، إِنْ لَمْ يُصْبِحْهُ أَهْلُهُ بِالْخَيْرِ صَارَ خَيْرًا، وَإِنْ لَمْ يُصْبِحْهُ بِالشَّرِّ صَارَ شَرًّا",
+    "source": "Atsar Ali bin Abi Thalib, Hasan",
+    "category": "Kewajiban Belajar",
+    "explanation": "Pendidikan anak usia dini sangat menentukan karakter masa depan mereka, seperti kertas putih yang siap ditulisi."
+  },
+  {
+    "id": 23,
+    "text": "Ajarlah anak-anak kalian tiga hal: cinta kepada Nabimu, cinta kepada keluarganya, dan membaca Al-Qur'an.",
+    "arabic": "عَلِّمُوا أَوْلَادَكُمْ ثَلَاثًا: حُبَّ نَبِيِّكُمْ، وَحُبَّ أَهْلَ بَيْتِهِ، وَقِرَاءَةَ الْقُرْآنِ",
+    "source": "HR. Hakim No. 4/297, Hasan",
+    "category": "Kewajiban Belajar",
+    "explanation": "Pendidikan spiritual harus menjadi fondasi utama dalam membentuk karakter Islami sejak dini."
+  },
+  {
+    "id": 24,
+    "text": "Sesungguhnya Allah menambah hamba yang berilmu dengan ilmu, dan menambahnya dengan kerendahan diri.",
+    "arabic": "إِنَّ اللَّهَ يَزِيدُ الْعَبْدَ الْعَالِمَ عِلْمًا، وَيَزِيدُهُ خُشُوعًا",
+    "source": "HR. Ibnu Majah No. 4170, Hasan",
+    "category": "Adab Penuntut Ilmu",
+    "explanation": "Ilmu yang sejati akan membawa kepada kerendahan hati, bukan kesombongan atau takabur."
+  },
+  {
+    "id": 25,
+    "text": "Waktu yang paling utama setelah waktu wajib adalah waktu yang digunakan untuk belajar ilmu.",
+    "arabic": "إِنَّ أَفْضَلَ الْأَوْقَاتِ بَعْدَ الْفَرَائِضِ مَا جُعِلَ فِي طَلَبِ الْعِلْمِ",
+    "source": "HR. Darimi No. 506, Hasan",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Menuntut ilmu memiliki prioritas tinggi dalam Islam, setelah menunaikan kewajiban utama."
+  },
+  {
+    "id": 26,
+    "text": "Jadilah engkau penuntut ilmu atau pengajar, atau pendengar yang baik, atau pencinta ilmu. Janganlah engkau menjadi yang kelima.",
+    "arabic": "كُنْ عَالِمًا أَوْ مُتَعَلِّمًا أَوْ مُسْتَمِعًا أَوْ مُحِبًّا لِلْعِلْمِ، وَلَا تَكُنِ الْخَامِسَ",
+    "source": "HR. Hakim No. 4/399, Hasan",
+    "category": "Kewajiban Belajar",
+    "explanation": "Setiap muslim harus memiliki peran positif dalam dunia pendidikan, minimal sebagai pencinta ilmu."
+  },
+  {
+    "id": 27,
+    "text": "Orang yang berilmu dan beramal adalah seperti tanah yang subur, menghasilkan buah yang banyak dan berkualitas.",
+    "arabic": "مَثَلُ الْعَالِمِ الْعَامِلِ كَمَثَلِ أَرْضٍ طَيِّبَةٍ تُنْبِتُ كُلَّ زَرْعٍ جَيِّدٍ",
+    "source": "HR. Thabrani No. 17/298, Hasan",
+    "category": "Amal dan Ilmu",
+    "explanation": "Ilmu tanpa amal seperti pohon tanpa buah, sedangkan ilmu dengan amal memberikan manfaat maksimal."
+  },
+  {
+    "id": 28,
+    "text": "Tinta ulama lebih mulia daripada darah para syuhada.",
+    "arabic": "مِدَادُ الْعُلَمَاءِ أَفْضَلُ مِنْ دِمَاءِ الشُّهَدَاءِ",
+    "source": "HR. Darimi No. 349, Hasan",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Kontribusi intelektual dan pendidikan memiliki nilai yang setara dengan pengorbanan tertinggi dalam Islam."
+  },
+  {
+    "id": 29,
+    "text": "Orang yang belajar dan mengajarkan ilmu adalah orang yang paling dekat dengan para nabi.",
+    "arabic": "إِنَّ أَقْرَبَ النَّاسِ مِنَ الْأَنْبِيَاءِ عِلْمًا وَعَمَلًا الْمُعَلِّمُونَ وَالْمُتَعَلِّمُونَ",
+    "source": "HR. Thabrani No. 10/197, Hasan",
+    "category": "Keutamaan Ilmu",
+    "explanation": "Profesi pendidikan memiliki kedudukan istimewa dalam Islam, mendekati posisi para nabi."
+  },
+  {
+    "id": 30,
+    "text": "Belajarlah sebelum kalian menjadi pemimpin, karena ketika kalian menjadi pemimpin, kalian tidak akan sempat belajar.",
+    "arabic": "تَعَلَّمُوا قَبْلَ أَنْ تُسَوَّدُوا، فَإِنَّكُمْ إِذَا سُوِّدْتُمْ لَمْ تَسْتَطِيعُوا أَنْ تَتَعَلَّمُوا",
+    "source": "Atsar Umar bin Khattab, Shahih",
+    "category": "Kewajiban Belajar",
+    "explanation": "Pendidikan adalah persiapan terbaik untuk kepemimpinan, karena ilmu adalah fondasi keputusan yang bijaksana."
+  }
+]
