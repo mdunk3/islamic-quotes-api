@@ -1,10 +1,6 @@
 # API Kutipan Islami Pendidikan
 
-![API Logo](/public/api-logo.png)
-
-API publik gratis yang menyajikan kutipan Islami tentang pendidikan yang telah diverifikasi secara akademis untuk sekolah Islam (SMPIT/MTs) di Indonesia.
-
-![Dashboard Preview](/public/dashboard-preview.png)
+API publik gratis yang menyajikan kutipan Islami tentang pendidikan yang telah diverifikasi secara akademis untuk sekolah Islam di Indonesia.
 
 ## 🎯 Tujuan
 
