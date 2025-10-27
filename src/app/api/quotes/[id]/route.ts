@@ -1,26 +1,34 @@
 import { NextResponse } from 'next/server';
-import quotesData from '../../../../quotes.json';
+import path from 'path';
+import { promises as fs } from 'fs';
+
+async function getQuotes() {
+  const jsonDirectory = path.join(process.cwd());
+  const fileContents = await fs.readFile(jsonDirectory + '/quotes.json', 'utf8');
+  return JSON.parse(fileContents);
+}
 
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
   try {
+    const quotes = await getQuotes();
     const id = parseInt(params.id);
-    
-    if (isNaN(id)) {
-      return NextResponse.json({ error: 'Invalid ID' }, { status: 400 });
-    }
-
-    const quote = quotesData.find(q => q.id === id);
+    const quote = quotes.find((q: any) => q.id === id);
     
     if (!quote) {
-      return NextResponse.json({ error: 'Quote not found' }, { status: 404 });
+      return NextResponse.json(
+        { error: 'Quote not found' },
+        { status: 404 }
+      );
     }
-
+    
     return NextResponse.json(quote);
   } catch (error) {
-    console.error('Quote by ID API Error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to load quote' },
+      { status: 500 }
+    );
   }
 }
