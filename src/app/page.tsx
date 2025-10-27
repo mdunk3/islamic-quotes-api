@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex justify-center mb-4">
             <div className="relative w-20 h-20">
               <img
-                src="/logo.svg"
+                src="/api-logo.png"
                 alt="API Logo"
                 className="w-full h-full object-contain"
               />
