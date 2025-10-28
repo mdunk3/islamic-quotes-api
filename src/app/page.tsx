@@ -142,16 +142,31 @@ const searchQuotes = useCallback(async () => {
     if (searchById) params.append('id', searchById);
     
     const url = `${API_BASE_URL}/api/quotes${params.toString() ? '?' + params.toString() : ''}`;
-    console.log('Search URL:', url); // DEBUG
+    console.log('Search URL:', url);
     
     const response = await fetch(url);
     if (!response.ok) throw new Error('Failed to search quotes');
     const data = await response.json();
     
-    console.log('Search response:', data); // DEBUG
+    console.log('Search response:', data);
     
-    // Handle both formats: array or object with data property
-    const quotesArray = Array.isArray(data) ? data : (data.data || []);
+    // Handle different response formats
+    let quotesArray: Quote[];
+    
+    if (Array.isArray(data)) {
+      // Response is array: [{...}, {...}]
+      quotesArray = data;
+    } else if (data.data && Array.isArray(data.data)) {
+      // Response is paginated: {data: [...], pagination: {...}}
+      quotesArray = data.data;
+    } else if (data.id) {
+      // Response is single object: {id: 5, text: '...'}
+      quotesArray = [data];
+    } else {
+      // Unknown format
+      quotesArray = [];
+    }
+    
     setQuotes(quotesArray);
     
     toast({
