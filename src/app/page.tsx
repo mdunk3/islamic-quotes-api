@@ -131,32 +131,45 @@ export default function Home() {
     }
   }, []);
 
-  // Search quotes
-  const searchQuotes = useCallback(async () => {
-    setLoading(prev => ({ ...prev, quotes: true }));
-    setError(null);
-    try {
-      const params = new URLSearchParams();
-      if (searchQuery) params.append('query', searchQuery);
-      if (selectedCategory) params.append('category', selectedCategory);
-      if (searchById) params.append('id', searchById);
-      
-      const response = await fetch(`${API_BASE_URL}/api/quotes?${params}`);
-      if (!response.ok) throw new Error('Failed to search quotes');
-      const data = await response.json();
-      setQuotes(data);
-      
-      toast({
-        title: "Berhasil",
-        description: `Ditemukan ${data.length} kutipan`,
-      });
-    } catch (error) {
-      console.error('Error searching quotes:', error);
-      setError('Pencarian gagal. Silakan coba lagi.');
-    } finally {
-      setLoading(prev => ({ ...prev, quotes: false }));
-    }
-  }, [searchQuery, selectedCategory, searchById, toast]);
+// Search quotes
+const searchQuotes = useCallback(async () => {
+  setLoading(prev => ({ ...prev, quotes: true }));
+  setError(null);
+  try {
+    const params = new URLSearchParams();
+    if (searchQuery) params.append('query', searchQuery);
+    if (selectedCategory) params.append('category', selectedCategory);
+    if (searchById) params.append('id', searchById);
+    
+    const url = `${API_BASE_URL}/api/quotes${params.toString() ? '?' + params.toString() : ''}`;
+    console.log('Search URL:', url); // DEBUG
+    
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Failed to search quotes');
+    const data = await response.json();
+    
+    console.log('Search response:', data); // DEBUG
+    
+    // Handle both formats: array or object with data property
+    const quotesArray = Array.isArray(data) ? data : (data.data || []);
+    setQuotes(quotesArray);
+    
+    toast({
+      title: "Berhasil",
+      description: `Ditemukan ${quotesArray.length} kutipan`,
+    });
+  } catch (error) {
+    console.error('Error searching quotes:', error);
+    setError('Pencarian gagal. Silakan coba lagi.');
+    toast({
+      title: "Error",
+      description: "Pencarian gagal. Silakan coba lagi.",
+      variant: "destructive"
+    });
+  } finally {
+    setLoading(prev => ({ ...prev, quotes: false }));
+  }
+}, [searchQuery, selectedCategory, searchById, toast]);
 
   // Get quote by ID
   const getQuoteById = useCallback(async (id: number) => {
