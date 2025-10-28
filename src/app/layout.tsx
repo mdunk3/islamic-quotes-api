@@ -32,7 +32,12 @@ export const metadata: Metadata = {
   publisher: "Islamic Quotes API",
   
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/logo.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" }, // Fallback untuk browser yang tidak support SVG
+    ],
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
 
   openGraph: {
@@ -42,12 +47,21 @@ export const metadata: Metadata = {
     title: "API Kutipan Islami Pendidikan - 50 Hadits Shahih",
     description: "Platform API gratis dengan 50 hadits shahih tentang pendidikan. Lengkap dengan teks Arab, terjemahan Indonesia, dan penjelasan.",
     siteName: "Islamic Quotes API",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Islamic Quotes API Logo",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "API Kutipan Islami Pendidikan",
     description: "50 hadits shahih tentang pendidikan - API gratis untuk pengembang aplikasi Islam",
+    images: ["/logo.svg"],
   },
 
   robots: {
@@ -75,6 +89,7 @@ export default function RootLayout({
     <html lang="id" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#10b981" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
